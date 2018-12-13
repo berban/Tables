@@ -1,4 +1,4 @@
-﻿; ReadTable
+; ReadTable()
 ; Reads a CSV file (or a CSV string) into a table object (just a 2-dimensional array.)
 ; The function returns an array in the format Array[Row Number][Column Name or Number]
 ; FileOrString = The path to a CSV file, or a string of tabular CSV-foratted text
@@ -59,7 +59,7 @@ ReadTable(FileOrString, Options="", ByRef Header="", ByRef RowCount="", ByRef Co
 }
 
 
-; WriteTable
+; WriteTable()
 ; Writes a table into a csv file, overwriting that file if necessary.
 ; Table = a table array in the same format as that produced with ReadTable()
 ; OutputPath = the path to the destination CSV file
@@ -89,9 +89,9 @@ WriteTable(ByRef Table, OutputPath, Headers="")
 
 
 ; SortTable()
-; Sorts a table based on one or more fields
+; Sorts a table based on one or more fields (columns). The sort is simply an insertion sort, so for very large tables it might be desirable to use another more efficient sorting algorithm.
 ; Input = Table array to sort
-; Fields* = Fields (columns) to sort it by
+; Fields* = One or more fields (columns) to sort the table by. If multiple are given, Field 2 will be used in the event of ties in Field 1, etc.
 ;    "2" = sort by column 2
 ;    "Date" = sort by column "Date", if the columns were given named headers
 ;    "~Date" = sort in inverse order
