@@ -44,7 +44,7 @@ ReadTable(FileOrString, Options="", ByRef Header="", ByRef RowCount="", ByRef Co
 			}
 		}
 		If Quoted
-			QuotedValue	.= "`n"
+			QuotedValue .= "`n"
 		Else If Headers
 			Header := Array[1].Clone(), Headers := False, Array := [], Col := 0
 		Else {
@@ -96,6 +96,7 @@ WriteTable(ByRef Table, OutputPath, Headers="")
 ;    "Date" = sort by column "Date", if the columns were given named headers
 ;    "~Date" = sort in inverse order
 ;    ["Date", "ParseDate"] = sort by Date using function ParseDate() to compare values. This function must accept 2 inputs and return a positive value if the first input is greater, much like the F option in AutoHotkey's Sort commmand.
+; The sorted table is returned by the function.
 
 SortTable(Input, Fields*)
 {
