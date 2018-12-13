@@ -1,2 +1,2 @@
-# CSV
-CSV Functions
+# Tables
+Functions for working with CSV tables
