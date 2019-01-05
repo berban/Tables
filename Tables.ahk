@@ -1,4 +1,5 @@
-; Forum Post: https://www.autohotkey.com/boards/viewtopic.php?f=6&t=59927
+; CSV Table Functions - by berban
+; https://www.autohotkey.com/boards/viewtopic.php?f=6&t=59927
 ; Last Update: December 12, 2018
 
 ; ReadTable()
