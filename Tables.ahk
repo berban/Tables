@@ -1,3 +1,6 @@
+; Forum Post: https://www.autohotkey.com/boards/viewtopic.php?f=6&t=59927
+; Last Update: December 12, 2018
+
 ; ReadTable()
 ; Reads a CSV file (or a CSV string) into a table object (just a 2-dimensional array.)
 ; The function returns an array in the format Array[Row Number][Column Name or Number]
