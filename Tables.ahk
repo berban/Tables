@@ -13,6 +13,7 @@
 ; ByRef Header = This is an output variable to store the header row if "Headers" is specified in the options. This is to allow the table to be re-written in the same format it was read, otherwise named columns would be ordered alphabetically.
 ; ByRef RowCount = number of rows read
 ; ByRef ColCount = number of columns read
+; Note: Carriage return (`r) is used as a sort of "special character" and if you have carriage returns separate from newlines for some reason they will be erased.
 
 ReadTable(FileOrString, Options="", ByRef Header="", ByRef RowCount="", ByRef ColCount="")
 {
